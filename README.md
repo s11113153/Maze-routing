@@ -37,7 +37,7 @@
       &ensp;&ensp;&ensp;&ensp; a vector of grid coordnates from the starting grid to the ending grid if a route is found,  
       &ensp;&ensp;&ensp;&ensp; an empty vector otherwise.
 
-### &ensp;&ensp;&ensp; routing class has member functions:  
+### &ensp; routing class has member functions:  
   - **select_maze()**:  
     &ensp;&ensp;&ensp;&ensp; Given a maze number, set the **maze_ptr**.  
     &ensp;&ensp;&ensp;&ensp; Rest **routing_success** and **route_path**
