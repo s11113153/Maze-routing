@@ -44,7 +44,7 @@
   - **get_start_grid()**:  
       &ensp;&ensp;&ensp;&ensp; In the selected maze, get and return the starting grid.
   - **route(coord_current_grid)**:  
-      &ensp;&ensp;&ensp;&ensp; This is a recursive function that traverses the maze from the starting grid toward the ending grid.
+      &ensp;&ensp;&ensp;&ensp; This is a recursive function that traverses the maze from the starting grid toward the ending grid.  
       &ensp;&ensp;&ensp;&ensp; As shown in the following figures, route() design should follow certain principles:    
 
 > &ensp;&ensp;&ensp; (1) route() will recursively try scan non-barrier neighbor for routing except the current source.  
