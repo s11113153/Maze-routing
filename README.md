@@ -9,12 +9,12 @@
   - struct of coord has data members: x, y  
 
 ## Second: 
-### &ensp;&ensp;&ensp; members data:
+### &ensp;members data:
   - h_barrier, v_barrier
   - maze_x_size, maze_y_size = 5
   - start_coord, end_coord
 
-### &ensp;&ensp;&ensp; members functions:
+### &ensp;members functions:
 - input():  
   &ensp;&ensp;&ensp;&ensp; h_barrier, v_barrier, start_coord, end_coord。  
   &ensp;&ensp;&ensp;&ensp; set maze_x_size = 5, maze_y_size = 5。
@@ -28,7 +28,7 @@
   &ensp;&ensp;&ensp;&ensp; Return the ending coordinate。
 
 ## Thirdly:&ensp;define a routing class 
-### &ensp;&ensp;&ensp; data members:
+### &ensp;data members:
   - maze_ptr:  
     &ensp;&ensp;&ensp;&ensp; points to a selectd maze object.
   - routing_success:  
@@ -42,15 +42,15 @@
     &ensp;&ensp;&ensp;&ensp; Given a maze number, set the **maze_ptr**.  
     &ensp;&ensp;&ensp;&ensp; Rest **routing_success** and **route_path**
   - get_start_grid():  
-    &ensp;&ensp;&ensp;&ensp; In the selected maze, get and return the starting        grid.
+    &ensp;&ensp;&ensp;&ensp; In the selected maze, get and return the starting grid.
   - route(coord_current_grid):  
-    &ensp;&ensp;&ensp;&ensp; This is a recursive function that traverses the          maze from the starting grid toward the ending grid.  
-     &ensp;&ensp;&ensp;&ensp; As shown in the following figures, route() design        should follow certain principles:  
-    > (1) route() will recursively try scan non-barrier neighbor for routing except the current source.  
-    > (2) route() will return when exhausting all scanned neighbors or finding the ending grid.  
-    > (3) route() will output grids when entering(calling) and leaving(returning).  
-    > (4) route() will record forward traversed grid in a path and remove if from the path when returning if still not finding the ending grid.
+    &ensp;&ensp;&ensp;&ensp; This is a recursive function that traverses the maze from the starting grid toward the ending grid.  
+     &ensp;&ensp;&ensp;&ensp; As shown in the following figures, route() design should follow certain principles:    
 
-
+> &ensp;&ensp;&ensp; (1) route() will recursively try scan non-barrier neighbor for routing except the current source.  
+> &ensp;&ensp;&ensp; (2) route() will return when exhausting all scanned neighbors or finding the ending grid.  
+> &ensp;&ensp;&ensp; (3) route() will output grids when entering(calling) and leaving(returning).  
+> &ensp;&ensp;&ensp; (4) route() will record forward traversed grid in a path and remove   
+  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;if from the path when returning if still not finding the ending grid.
 
 
