@@ -9,7 +9,7 @@
   - struct of coord has int members: x, y  
 
 ## Second: represent a 5x5 maze in a **maze** class
-### &ensp;members class has data:
+### &ensp;maze class has data members:
   - **h_barrier**, **v_barrier**
   - **maze_x_size**, and **maze_y_size** = 5
   - **start_coord**, **end_coord**
