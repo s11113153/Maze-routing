@@ -46,27 +46,35 @@ void scan(bool** array, int y, int x, std::string who, bool isPrint) {
 
 Maze::Maze() {
   log(__func__, "Maze is created");
+  start_coord = new Coord(6, 2);
+  end_coord = new Coord(2, 6);
 }
 
 Maze::~Maze() {
   delete [] h_barrier;
   delete [] v_barrier;
+  delete start_coord;
+  delete end_coord;
+
   h_barrier = NULL;
   v_barrier = NULL;
+  start_coord = NULL;
+  end_coord = NULL;
+
   log(__func__, "Maze is deconstructor");
 }
 
 void Maze::input() {
-  h_barrier = new bool *[MAZE_SIZE_Y + 3];
+  h_barrier = new bool *[MAZE_SIZE_Y + 2];
+  for (int i = 0; i < MAZE_SIZE_Y + 2; i++)
+      h_barrier[i] = new bool[MAZE_SIZE_X + 3];
+
+  v_barrier = new bool *[MAZE_SIZE_Y + 3];
   for (int i = 0; i < MAZE_SIZE_Y + 3; i++)
       h_barrier[i] = new bool[MAZE_SIZE_X + 2];
 
-  v_barrier = new bool *[MAZE_SIZE_Y + 2];
-  for (int i = 0; i < MAZE_SIZE_Y + 2; i++)
-    h_barrier[i] = new bool[MAZE_SIZE_X + 3];
-
-  scan(h_barrier, MAZE_SIZE_Y + 3, MAZE_SIZE_X + 2, "h_barrier", true);
-  scan(v_barrier, MAZE_SIZE_Y + 2, MAZE_SIZE_X + 3, "v_barrier", true);
+  scan(h_barrier, MAZE_SIZE_Y + 2, MAZE_SIZE_X + 3, "h_barrier", true);
+  scan(v_barrier, MAZE_SIZE_Y + 3, MAZE_SIZE_X + 2, "v_barrier", true);
 }
 
 bool Maze::check_h_barrier() {
@@ -77,12 +85,12 @@ bool Maze::check_v_barrier() {
   return false;
 }
 
-Coord Maze::get_start_coord() {
-  return this->start_coord;
+Coord * Maze::get_start_coord() {
+  return start_coord;
 }
 
-Coord Maze::get_end_coord() {
-  return this->end_coord;
+Coord * Maze::get_end_coord() {
+  return end_coord;
 }
 
 

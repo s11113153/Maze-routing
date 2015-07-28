@@ -30,14 +30,37 @@ public:
   void input();
   bool check_h_barrier();
   bool check_v_barrier();
-  Coord get_start_coord();
-  Coord get_end_coord();
-  
+  Coord * get_start_coord();
+  Coord * get_end_coord();
+
 private:
   bool ** v_barrier;
   bool ** h_barrier;
-  Coord start_coord;
-  Coord end_coord;
+  Coord * start_coord;
+  Coord * end_coord;
+
+  struct Case {
+    bool v_barrier[8][7] = {
+      {1, 1, 1, 1, 1, 1, 1},
+      {0, 1, 1, 1, 1, 1, 0},
+      {0, 0, 0, 0, 1, 0, 1},
+      {0, 0, 1, 1, 0, 1, 1},
+      {0, 0, 0, 0, 1, 0, 0},
+      {0, 0, 0, 1, 0, 0, 0},
+      {0, 1, 0, 1, 1, 1, 0},
+      {1, 1, 1, 1, 1, 1, 1}
+    };
+    bool h_barrier[7][8] = {
+      {1, 0, 0, 0, 0, 0, 0, 1},
+      {1, 1, 0, 1, 0, 0, 1, 1},
+      {1, 1, 1, 1, 0, 1, 0, 1},
+      {1, 1, 0, 1, 1, 0, 1, 1},
+      {1, 1, 1, 1, 0, 1, 1, 1},
+      {1, 1, 1, 0, 0, 0, 1, 1},
+      {1, 0, 1, 1, 0, 0, 0, 1}
+    };
+  } _case;
+
 };
 
 #endif /* defined(__Maze_routing__Maze__) */

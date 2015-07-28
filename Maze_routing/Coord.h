@@ -15,6 +15,11 @@ struct Coord {
 public:
   int X;
   int Y;
+
+  Coord(int x, int y) {
+    this->X = x;
+    this->Y = y;
+  }
 };
 
 #endif /* defined(__Maze_routing__Coord__) */
