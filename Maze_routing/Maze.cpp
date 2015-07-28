@@ -51,17 +51,18 @@ Maze::Maze() {
 }
 
 Maze::~Maze() {
-  delete [] h_barrier;
-  delete [] v_barrier;
+  log(__func__, "Maze is deconstructor");
+  if (isDelete) {
+    delete [] v_barrier;
+    delete [] h_barrier;
+    h_barrier = NULL;
+    v_barrier = NULL;
+    
+  }
   delete start_coord;
   delete end_coord;
-
-  h_barrier = NULL;
-  v_barrier = NULL;
   start_coord = NULL;
   end_coord = NULL;
-
-  log(__func__, "Maze is deconstructor");
 }
 
 void Maze::input() {
@@ -75,14 +76,65 @@ void Maze::input() {
 
   scan(h_barrier, MAZE_SIZE_Y + 2, MAZE_SIZE_X + 3, "h_barrier", true);
   scan(v_barrier, MAZE_SIZE_Y + 3, MAZE_SIZE_X + 2, "v_barrier", true);
+
+  isDelete = true;
 }
 
-bool Maze::check_h_barrier() {
-  return false;
+//Coord top    = Coord(curCoord.X, curCoord.Y - 1);
+//Coord bottom = Coord(curCoord.X, curCoord.Y + 1);
+//Coord left   = Coord(curCoord.X - 1, curCoord.Y);
+//Coord right  = Coord(curCoord.X + 1, curCoord.Y);
+
+bool Maze::check_h_barrier(Coord curCoord, HorizontalBarrier barrier) {
+//  if (curCoord.Y + 1 < 8 ) return false;
+
+//  if (barrier == HorizontalBarrier::Bottom && _case.h_barrier[curCoord.X][curCoord.Y + 1] == 1) return false;
+//  if (barrier == HorizontalBarrier::Top && _case.h_barrier[curCoord.X][curCoord.Y] == 1) return false;
+//  return true;
+
+  if (barrier == HorizontalBarrier::Bottom) {
+    if (_case.h_barrier[curCoord.X][curCoord.Y + 1] == 1) {
+      return false;
+    } else {
+      _case.h_barrier[curCoord.X][curCoord.Y + 1] = 1;
+    }
+  }
+
+  if (barrier == HorizontalBarrier::Top) {
+    if (_case.h_barrier[curCoord.X][curCoord.Y] == 1) {
+      return false;
+    } else {
+      _case.h_barrier[curCoord.X][curCoord.Y] = 1;
+    }
+  }
+
+  return true;
 }
 
-bool Maze::check_v_barrier() {
-  return false;
+bool Maze::check_v_barrier(Coord curCoord, VerticalBarrier barrier) {
+//  if (curCoord.X + 1 > 8) return false;
+//  if (barrier == VerticalBarrier::Right && _case.v_barrier[curCoord.X + 1][curCoord.Y] == 1) return false;
+//  if (barrier == VerticalBarrier::Left && _case.v_barrier[curCoord.X][curCoord.Y] == 1) return false;
+//  return true;
+
+
+  if (barrier == VerticalBarrier::Right) {
+    if (_case.v_barrier[curCoord.X + 1][curCoord.Y] == 1) {
+      return false;
+    } else {
+      _case.v_barrier[curCoord.X + 1][curCoord.Y] = 1;
+    }
+  }
+
+  if (barrier == VerticalBarrier::Left) {
+    if (_case.v_barrier[curCoord.X][curCoord.Y] == 1) {
+      return false;
+    } else {
+      _case.v_barrier[curCoord.X][curCoord.Y] = 1;
+    }
+  }
+
+  return true;
 }
 
 Coord * Maze::get_start_coord() {

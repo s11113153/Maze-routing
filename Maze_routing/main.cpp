@@ -8,11 +8,18 @@
 
 #include <iostream>
 #include "Maze.h"
-
+#include "Routing.h"
+#include <vector>
 
 using std::cout;
 using std::endl;
 
+
 int main(int argc, const char * argv[]) {
+  Routing routing;
+  routing.select_maze()
+         .route(routing.get_start_grid());
+
+
   return EXIT_SUCCESS;
 }

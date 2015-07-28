@@ -27,15 +27,25 @@ public:
   const int MAZE_SIZE_X = 5;
   const int MAZE_SIZE_Y = 5;
 
+  enum HorizontalBarrier {
+    Top, Bottom
+  };
+
+  enum VerticalBarrier {
+    Left, Right
+  };
+
   void input();
-  bool check_h_barrier();
-  bool check_v_barrier();
+  bool check_h_barrier(Coord curCoord, HorizontalBarrier barrier);
+  bool check_v_barrier(Coord curCoord, VerticalBarrier barrier);
   Coord * get_start_coord();
   Coord * get_end_coord();
-
+  
 private:
   bool ** v_barrier;
   bool ** h_barrier;
+  bool isDelete = false;
+
   Coord * start_coord;
   Coord * end_coord;
 

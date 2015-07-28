@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F850CB571B660A3C00B62213 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F850CB561B660A3C00B62213 /* main.cpp */; };
 		F850CB651B660C4100B62213 /* Maze.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F850CB631B660C4100B62213 /* Maze.cpp */; };
+		F852959C1B67358C00291247 /* Routing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F852959A1B67358C00291247 /* Routing.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,8 @@
 		F850CB611B660B7C00B62213 /* Coord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coord.h; sourceTree = "<group>"; };
 		F850CB631B660C4100B62213 /* Maze.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Maze.cpp; sourceTree = "<group>"; };
 		F850CB641B660C4100B62213 /* Maze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maze.h; sourceTree = "<group>"; };
+		F852959A1B67358C00291247 /* Routing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Routing.cpp; sourceTree = "<group>"; };
+		F852959B1B67358C00291247 /* Routing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Routing.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 				F850CB611B660B7C00B62213 /* Coord.h */,
 				F850CB631B660C4100B62213 /* Maze.cpp */,
 				F850CB641B660C4100B62213 /* Maze.h */,
+				F852959A1B67358C00291247 /* Routing.cpp */,
+				F852959B1B67358C00291247 /* Routing.h */,
 			);
 			path = Maze_routing;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F852959C1B67358C00291247 /* Routing.cpp in Sources */,
 				F850CB651B660C4100B62213 /* Maze.cpp in Sources */,
 				F850CB571B660A3C00B62213 /* main.cpp in Sources */,
 			);
@@ -243,6 +249,7 @@
 				F850CB5C1B660A3C00B62213 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
