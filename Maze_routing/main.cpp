@@ -20,6 +20,5 @@ int main(int argc, const char * argv[]) {
   routing.select_maze()
          .route(routing.get_start_grid());
 
-
   return EXIT_SUCCESS;
 }

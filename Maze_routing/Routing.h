@@ -33,18 +33,15 @@ public:
    * Recursive function
    * traverses the maze from the starting grid toward the ending grid
    */
-  bool route(Coord curCoord);
+  void route(Coord curCoord);
 
   ~Routing();
 
-
+private:
   bool doTop(Coord curCoord);
   bool doBootom(Coord curCoord);
   bool doLeft(Coord curCoord);
   bool doRight(Coord curCoord);
-
-private:
-  bool search(Coord curCoord);
 };
 
 #endif /* defined(__Maze_routing__Routing__) */
