@@ -46,8 +46,8 @@ void scan(bool** array, int y, int x, std::string who, bool isPrint) {
 
 Maze::Maze() {
   log(__func__, "Maze is created");
-  start_coord = new Coord(6, 2);
-  end_coord = new Coord(2, 6);
+  start_coord = new Coord(4, 0);
+  end_coord = new Coord(0, 5);
 }
 
 Maze::~Maze() {
