@@ -16,11 +16,8 @@ Routing & Routing::select_maze() {
 }
 
 bool isReachEndGrid(Coord curCoord, Maze & maze_ptr) {
-  Coord *endCoord = maze_ptr.get_end_coord();
-//  printf("cur %d %d, 終點 %d %d\n", curCoord.X, curCoord.Y, endCoord->X, endCoord->Y);
-
-  if (curCoord.X == endCoord->X && curCoord.Y == endCoord->Y) return true;
-
+  Coord endCoord = *maze_ptr.get_end_coord();
+  if (curCoord.X == endCoord.X && curCoord.Y == endCoord.Y) return true;
   return false;
 }
 
