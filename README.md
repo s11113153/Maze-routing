@@ -2,7 +2,7 @@
 
 ## Description
 >  maze routing in C++ program.  
->  output: true + path **OR** false
+>  output: **true + path** or **false**
 
 ## First
   - define a struct of **coord**  
