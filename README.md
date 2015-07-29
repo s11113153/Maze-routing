@@ -69,19 +69,19 @@
   &ensp;&ensp;&ensp;&ensp; 迷宮障礙物: 一個二維陣列表示垂直障礙物, 另一個表示橫向障礙物。  
   &ensp;&ensp;&ensp;&ensp; path的組成: 入口的位置到走到出口的位置(coord代表位置)。  
   &ensp;&ensp;&ensp;&ensp; 走迷宮的解決辦法:  
-  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 從迷宮入口走起,並且往可以走的方向前進(方向選擇優先權右下左上):  
-  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 如果最高優先權不會碰到障礙物, 就往最高優先權方向前進,  
-  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 否則最高優先權碰到障礙物就採用次之的優先權, 以此類推...。  
-  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 如果能夠走到迷宮的出口位置, 就把入口到出口每次選擇的路徑給印下來。  
-  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 如果走到死路,就折返到當前選擇權 > 1的路徑, 並換次之可以走的優先權(不會到碰礙物) 繼續走  
-  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 如果到最後, 迷宮所有可走的路徑都走過了, 就印出 leave  
+  - &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 從迷宮入口走起,並且往可以走的方向前進(方向選擇優先權右下左上):  
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 如果最高優先權不會碰到障礙物, 就往最高優先權方向前進,  
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 否則最高優先權碰到障礙物就採用次之的優先權, 以此類推...。  
+  - &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 如果能夠走到迷宮的出口位置,就把入口到出口每次選擇的路徑給印下來。    
+  - &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 如果走到死路,就折返到當前選擇權 > 1的路徑, 並換次之可以走的優先權(不會到碰礙物) 繼續走,  
+  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 如果到最後, 迷宮所有可走的路徑都走過還走不出去, 就印出 leave。  
   
   
   
   
 ### &ensp;&ensp; 程式層設計:
   &ensp;&ensp;&ensp;&ensp;
-  此 Project 就有程式設計。
+  此 Project 就有程式設計，在 Maze-routing 資料夾。
 ### &ensp;&ensp; 程式碼設計:
   &ensp;&ensp;&ensp;&ensp;
   此 Project 內有自定義 6 張迷宮, 並且已經測試過。  
