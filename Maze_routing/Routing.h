@@ -33,7 +33,7 @@ public:
    * Recursive function
    * traverses the maze from the starting grid toward the ending grid
    */
-  void route(Coord curCoord);
+  bool route(Coord curCoord);
 
   ~Routing();
   

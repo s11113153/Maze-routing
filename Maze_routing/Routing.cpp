@@ -28,32 +28,32 @@ Coord Routing::get_start_grid() {
 bool Routing::doTop(Coord curCoord) {
   Coord top = Coord(curCoord.X, curCoord.Y - 1);
   bool isTop = maze_ptr->check_h_barrier(curCoord, Maze::HorizontalBarrier::Top);
-  if (isTop) route(top);
+  if (isTop) return route(top);
   return false;
 }
 
 bool Routing::doBootom(Coord curCoord) {
   Coord bottom = Coord(curCoord.X, curCoord.Y + 1);
   bool isBottom = maze_ptr->check_h_barrier(curCoord, Maze::HorizontalBarrier::Bottom);
-  if (isBottom) route(bottom);
+  if (isBottom) return route(bottom);
   return false;
 }
 
 bool Routing::doRight(Coord curCoord) {
   Coord right  = Coord(curCoord.X + 1, curCoord.Y);
   bool isRight = maze_ptr->check_v_barrier(curCoord, Maze::VerticalBarrier::Right);
-  if (isRight) route(right);
+  if (isRight) return route(right);
   return false;
 }
 
 bool Routing::doLeft(Coord curCoord) {
   Coord left = Coord(curCoord.X - 1, curCoord.Y);
   bool isLeft = maze_ptr->check_v_barrier(curCoord, Maze::VerticalBarrier::Left);
-  if (isLeft) route(left);
+  if (isLeft) return route(left);
   return false;
 }
 
-void Routing::route(Coord curCoord) {
+bool Routing::route(Coord curCoord) {
   route_path.push_back(curCoord);
   
   if (isReachEndGrid(curCoord, *maze_ptr)) {
@@ -62,7 +62,7 @@ void Routing::route(Coord curCoord) {
       Coord c = route_path[i];
       fprintf(stdout, "%d %d \n", c.X, c.Y);
     }
-    return;
+    return true;
   }
 
   if (doLeft(curCoord) || doBootom(curCoord) || doTop(curCoord) || doRight(curCoord)) {}
@@ -75,7 +75,7 @@ void Routing::route(Coord curCoord) {
 //      route_path.pop_back();
 //    }
 
-
+  return false;
 }
 
 Routing::~Routing() {
