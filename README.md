@@ -53,6 +53,28 @@
 > &ensp;&ensp;&ensp; (4) route() will record forward traversed grid in a path and remove   
 > &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;if from the path when returning if still not finding the ending grid.
 
-## 心得:
+## 設計五步驟:
+### &ensp;&ensp; 領域知識探索掌握:
+  &ensp;&ensp;&ensp;&ensp;
+  這是遞迴的概念, 給定初始值(start coord)、終止步驟(迷宮都scan過 OR 當前點位置出口)，否則一直呼叫本身。
+  
+### &ensp;&ensp; 系統層設計:
+  &ensp;&ensp;&ensp;&ensp; **struct**: Coord,     
+  &ensp;&ensp;&ensp;&ensp; **class**: Maze, Routing    
+  
+  &ensp;&ensp;&ensp;&ensp; Coord 用來表示座標點  
+  &ensp;&ensp;&ensp;&ensp; Maze 用來設定迷宮的障礙物以及出入口  
+  &ensp;&ensp;&ensp;&ensp; Routing 用來紀錄你所走的路徑(會根據 Maze 障礙物, 並且不會往回走)  
+  
+### &ensp;&ensp; 邏輯層設計:
+  &ensp;&ensp;&ensp;&ensp;
+
+### &ensp;&ensp; 程式層設計:
+### &ensp;&ensp; 程式碼設計:
+
+
+
+## 心得
+
 
 
