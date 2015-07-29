@@ -20,5 +20,12 @@ int main(int argc, const char * argv[]) {
   routing.select_maze()
          .route(routing.get_start_grid());
 
+  if (routing.routing_success) {
+    routing.route_path.size();
+    fprintf(stdout, "leave\n");
+  } else {
+    fprintf(stdout, "被困死了\n");
+  }
+
   return EXIT_SUCCESS;
 }

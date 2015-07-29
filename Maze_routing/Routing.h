@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <vector>
 #include "Maze.h"
-
+#include "Coord.h"
 
 class Routing {
 public:
@@ -26,7 +26,7 @@ public:
    */
   Routing & select_maze();
 
-  /* In the selected maze, get and return the starting grid */
+  /* In the seleted maze, get and return the starting grid */
   Coord get_start_grid();
 
   /*
@@ -36,7 +36,7 @@ public:
   void route(Coord curCoord);
 
   ~Routing();
-
+  
 private:
   bool doTop(Coord curCoord);
   bool doBootom(Coord curCoord);
