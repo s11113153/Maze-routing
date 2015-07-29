@@ -51,6 +51,7 @@
 > &ensp;&ensp;&ensp; (2) route() will return when exhausting all scanned neighbors or finding the ending grid.  
 > &ensp;&ensp;&ensp; (3) route() will output grids when entering(calling) and leaving(returning).  
 > &ensp;&ensp;&ensp; (4) route() will record forward traversed grid in a path and remove   
-  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;if from the path when returning if still not finding the ending grid.
+> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;if from the path when returning if still not finding the ending grid.
 
+## 心得:
 
