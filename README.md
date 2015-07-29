@@ -83,6 +83,7 @@
 ### &ensp;&ensp; 程式碼設計:
   &ensp;&ensp;&ensp;&ensp;
   此 Project 內有自定義 6 張迷宮, 並且已經測試過。  
+  &ensp;&ensp;&ensp;&ensp;
   若有 Bug 或是邏輯錯誤, 會在修正此專案的版本。  
 
 ## 心得
