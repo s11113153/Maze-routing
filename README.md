@@ -58,8 +58,8 @@
   &ensp;&ensp;&ensp;&ensp; 迷宮如果能走到終點印出 leave + 走過的 path, 否則印出 leave。
   
 ### &ensp;&ensp; 系統層設計:
-  &ensp;&ensp;&ensp;&ensp; 迷宮會有障礙物以及出入口, **path** 代表的是由入口正確走到出口的路徑
-  &ensp;&ensp;&ensp;&ensp; 迷宮由入口走入,並且嘗試往可以走的方向前進,  
+  &ensp;&ensp;&ensp;&ensp; 迷宮會有障礙物以及出入口, **path** 代表的是由入口正確走到出口的路徑  
+  &ensp;&ensp;&ensp;&ensp; 迷宮由入口走入,並且嘗試往可以走的方向前進,   
   &ensp;&ensp;&ensp;&ensp; 如果走到死路就退回上一個選擇路口的分叉點並換條另一條路繼續走, 直到迷宮走完, 或是走到出口。 
   &ensp;&ensp;&ensp;&ensp; 如果能走迷宮印出 leave + path。  
   &ensp;&ensp;&ensp;&ensp; 如果發現路已經走過, 返回去另一條路, 如果每個路口都走過了還是走不出去, 印出 leave。  
