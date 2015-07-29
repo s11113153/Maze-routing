@@ -85,6 +85,16 @@
   若有 Bug 或是邏輯錯誤, 會在修正此專案的版本。  
 
 ## 心得
+  &ensp;&ensp;&ensp;&ensp; 
+  學長查看程式碼的時候有問到這些函數回傳 fasle (doTop, doRight, doLeft, doBottom) 的原因,  
+  &ensp;&ensp;&ensp;&ensp; 
+  我的想法跟實作的方法有差異, 原本是想說會走到終點的座標會回傳給之前呼叫它的座標為true...一直到起始點,  
+  &ensp;&ensp;&ensp;&ensp; 如果都為true, 那麼這就是一條通往出口的正確道路, 否則回傳 false。  
+  &ensp;&ensp;&ensp;&ensp; 但是我程式執行最後好像都會 return false ，經過學長提醒後, 已經修正過了。  
+  &ensp;&ensp;&ensp;&ensp; 此外學長還有講到到進一步處理多重出口的路徑，開一個資料結構(Array, Map, List...) 用來儲存,  
+  &ensp;&ensp;&ensp;&ensp;
+  並把走到終點就停止遞迴的步驟拿掉,這樣就可以了。
+  
 
 
 
