@@ -71,7 +71,7 @@
   
   &ensp;&ensp;&ensp;&ensp; Maze 會有出入口以及多數障礙物, 並要求 Maze 大小為 5*5 矩陣: 這步驟由 input 處理出入口以及障礙物的座標。  
   
-  &ensp;&ensp;&ensp;&ensp; Routing 選擇要挑戰的迷宮以及入口: 由 select_maze 設定迷宮, get_start_grid 獲得入口。
+  &ensp;&ensp;&ensp;&ensp; Routing 選擇要挑戰的迷宮以及入口: 由 select_maze 設定迷宮, get_start_grid 獲得入口。  
   &ensp;&ensp;&ensp;&ensp; Routing 要走下一步之前會先詢問 Maze 是否可以通行(check_h_barrier, check_v_barrier) 以及是否已經走到終點。  
   &ensp;&ensp;&ensp;&ensp; Routing 如果都走遍路徑, 還是沒走到終點: output leave，否則的話: output leave + 如何走出去的路徑(route_path)。  
   
